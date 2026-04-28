@@ -1,0 +1,15 @@
+html
+---
+layout: default
+title: Все записи
+---
+<h1>📰 Все записи о посёлке</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <strong>{{ post.date | date: "%d.%m.%Y" }}</strong> —
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
